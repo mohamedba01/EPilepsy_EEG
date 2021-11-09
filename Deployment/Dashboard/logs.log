@@ -1,0 +1,1725 @@
+2021-05-15 10:46:15,986:INFO:Initializing load_model()
+2021-05-15 10:46:15,986:INFO:load_model(model_name=deployment_28042020, platform=None, authentication=None, verbose=True)
+2021-05-15 10:46:19,231:INFO:Initializing load_model()
+2021-05-15 10:46:19,232:INFO:load_model(model_name=deployment_28042020, platform=None, authentication=None, verbose=True)
+2021-05-15 10:46:37,530:INFO:Initializing load_model()
+2021-05-15 10:46:37,531:INFO:load_model(model_name=, platform=None, authentication=None, verbose=True)
+2021-05-15 10:47:19,000:INFO:Initializing load_model()
+2021-05-15 10:47:19,001:INFO:load_model(model_name=, platform=None, authentication=None, verbose=True)
+2021-05-15 10:49:47,265:INFO:Initializing load_model()
+2021-05-15 10:49:47,265:INFO:load_model(model_name=, platform=None, authentication=None, verbose=True)
+2021-05-15 11:29:40,888:INFO:PyCaret Supervised Module
+2021-05-15 11:29:40,888:INFO:ML Usecase: classification
+2021-05-15 11:29:40,888:INFO:version 2.3.1
+2021-05-15 11:29:40,889:INFO:Initializing setup()
+2021-05-15 11:29:40,889:INFO:setup(target=class, ml_usecase=classification, available_plots={'parameter': 'Hyperparameters', 'auc': 'AUC', 'confusion_matrix': 'Confusion Matrix', 'threshold': 'Threshold', 'pr': 'Precision Recall', 'error': 'Prediction Error', 'class_report': 'Class Report', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'calibration': 'Calibration Curve', 'vc': 'Validation Curve', 'dimension': 'Dimensions', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'boundary': 'Decision Boundary', 'lift': 'Lift Chart', 'gain': 'Gain Chart', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=['Gender', 'Impression', 'HR'], categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=median, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=True, normalize_method=zscore, transformation=True, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=True, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=True, multicollinearity_threshold=0.95, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=stratifiedkfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=123, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=True, verbose=True, profile=False, profile_kwargs=None, display=None)
+2021-05-15 11:29:40,889:INFO:Checking environment
+2021-05-15 11:29:40,889:INFO:python_version: 3.8.10
+2021-05-15 11:29:40,889:INFO:python_build: ('tags/v3.8.10:3d8993a', 'May  3 2021 11:48:03')
+2021-05-15 11:29:40,889:INFO:machine: AMD64
+2021-05-15 11:29:40,923:INFO:platform: Windows-10-10.0.19042-SP0
+2021-05-15 11:29:40,926:WARNING:cannot find psutil installation. memory not traceable. Install psutil using pip to enable memory logging.
+2021-05-15 11:29:40,926:INFO:Checking libraries
+2021-05-15 11:29:40,926:INFO:pd==1.2.4
+2021-05-15 11:29:40,926:INFO:numpy==1.19.5
+2021-05-15 11:29:40,926:INFO:sklearn==0.23.2
+2021-05-15 11:29:40,927:INFO:lightgbm==3.2.1
+2021-05-15 11:29:40,929:WARNING:catboost not found
+2021-05-15 11:29:40,931:WARNING:xgboost not found
+2021-05-15 11:29:43,190:INFO:mlflow==1.17.0
+2021-05-15 11:29:43,190:INFO:Checking Exceptions
+2021-05-15 11:29:43,190:INFO:Declaring global variables
+2021-05-15 11:29:43,191:INFO:USI: 0dcf
+2021-05-15 11:29:43,191:INFO:pycaret_globals: {'exp_name_log', 'log_plots_param', '_all_models', 'fold_param', 'USI', 'y', 'X_test', 'html_param', 'prep_pipe', '_available_plots', 'seed', 'display_container', 'transform_target_param', 'n_jobs_param', '_ml_usecase', 'experiment__', 'master_model_container', 'imputation_regressor', 'fix_imbalance_param', 'X_train', 'iterative_imputation_iters_param', '_internal_pipeline', 'fix_imbalance_method_param', 'create_model_container', 'y_train', 'stratify_param', 'target_param', 'y_test', '_gpu_n_jobs_param', 'data_before_preprocess', 'imputation_classifier', '_all_metrics', 'gpu_param', 'logging_param', 'transform_target_method_param', 'fold_shuffle_param', 'pycaret_globals', 'fold_groups_param_full', 'fold_groups_param', '_all_models_internal', 'X', 'fold_generator'}
+2021-05-15 11:29:43,191:INFO:Preparing display monitor
+2021-05-15 11:29:43,191:INFO:Preparing display monitor
+2021-05-15 11:29:43,215:INFO:Importing libraries
+2021-05-15 11:29:43,216:INFO:Copying data for preprocessing
+2021-05-15 11:29:43,228:INFO:Declaring preprocessing parameters
+2021-05-15 11:29:43,232:INFO:Creating preprocessing pipeline
+2021-05-15 11:29:43,278:INFO:Preprocessing pipeline created successfully
+2021-05-15 11:29:43,278:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2021-05-15 11:29:43,278:INFO:Creating global containers
+2021-05-15 11:29:43,291:INFO:Internal pipeline: Pipeline(memory=None, steps=[('empty_step', 'passthrough')], verbose=False)
+2021-05-15 11:29:44,370:WARNING:Couldn't import xgboost.XGBClassifier
+2021-05-15 11:29:44,374:WARNING:Couldn't import catboost.CatBoostClassifier
+2021-05-15 11:29:44,503:WARNING:Couldn't import xgboost.XGBClassifier
+2021-05-15 11:29:44,506:WARNING:Couldn't import catboost.CatBoostClassifier
+2021-05-15 11:29:44,507:INFO:Creating grid variables
+2021-05-15 11:29:44,545:INFO:create_model_container: 0
+2021-05-15 11:29:44,546:INFO:master_model_container: 0
+2021-05-15 11:29:44,547:INFO:display_container: 1
+2021-05-15 11:29:44,563:INFO:Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False, features_todrop=[],
+                                      id_columns=[],
+                                      ml_usecase='classification',
+                                      numerical_features=[], target='class',
+                                      time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_nu...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       correlation_with_target_threshold=0.0,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough')],
+         verbose=False)
+2021-05-15 11:29:44,563:INFO:setup() succesfully completed......................................
+2021-05-15 11:33:41,494:INFO:Initializing compare_models()
+2021-05-15 11:33:41,495:INFO:compare_models(include=None, fold=None, round=4, cross_validation=True, sort=Accuracy, n_select=1, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, verbose=True, display=None, exclude=None)
+2021-05-15 11:33:41,495:INFO:Checking exceptions
+2021-05-15 11:33:41,497:INFO:Preparing display monitor
+2021-05-15 11:33:41,497:INFO:Preparing display monitor
+2021-05-15 11:33:41,550:INFO:Initializing Logistic Regression
+2021-05-15 11:33:41,551:INFO:Total runtime is 1.6792615254720053e-05 minutes
+2021-05-15 11:33:41,569:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:33:41,570:INFO:Initializing create_model()
+2021-05-15 11:33:41,571:INFO:create_model(estimator=lr, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E7CE1DE50>, kwargs={})
+2021-05-15 11:33:41,571:INFO:Checking exceptions
+2021-05-15 11:33:41,571:INFO:Importing libraries
+2021-05-15 11:33:41,572:INFO:Copying training dataset
+2021-05-15 11:33:41,573:INFO:Defining folds
+2021-05-15 11:33:41,573:INFO:Declaring metric variables
+2021-05-15 11:33:41,588:INFO:Importing untrained model
+2021-05-15 11:33:41,602:INFO:Logistic Regression Imported succesfully
+2021-05-15 11:33:41,629:INFO:Starting cross validation
+2021-05-15 11:33:41,630:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:33:47,186:INFO:Calculating mean and std
+2021-05-15 11:33:47,189:INFO:Creating metrics dataframe
+2021-05-15 11:33:47,201:INFO:Uploading results into container
+2021-05-15 11:33:47,201:INFO:Uploading model into container now
+2021-05-15 11:33:47,202:INFO:create_model_container: 1
+2021-05-15 11:33:47,202:INFO:master_model_container: 1
+2021-05-15 11:33:47,202:INFO:display_container: 2
+2021-05-15 11:33:47,205:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2021-05-15 11:33:47,205:INFO:create_model() succesfully completed......................................
+2021-05-15 11:33:47,302:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:33:47,302:INFO:Creating metrics dataframe
+2021-05-15 11:33:47,321:INFO:Initializing K Neighbors Classifier
+2021-05-15 11:33:47,321:INFO:Total runtime is 0.09617899656295777 minutes
+2021-05-15 11:33:47,336:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:33:47,336:INFO:Initializing create_model()
+2021-05-15 11:33:47,336:INFO:create_model(estimator=knn, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E7CE1DE50>, kwargs={})
+2021-05-15 11:33:47,336:INFO:Checking exceptions
+2021-05-15 11:33:47,336:INFO:Importing libraries
+2021-05-15 11:33:47,337:INFO:Copying training dataset
+2021-05-15 11:33:47,338:INFO:Defining folds
+2021-05-15 11:33:47,338:INFO:Declaring metric variables
+2021-05-15 11:33:47,353:INFO:Importing untrained model
+2021-05-15 11:33:47,365:INFO:K Neighbors Classifier Imported succesfully
+2021-05-15 11:33:47,385:INFO:Starting cross validation
+2021-05-15 11:33:47,385:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:33:47,521:INFO:Calculating mean and std
+2021-05-15 11:33:47,523:INFO:Creating metrics dataframe
+2021-05-15 11:33:47,530:INFO:Uploading results into container
+2021-05-15 11:33:47,530:INFO:Uploading model into container now
+2021-05-15 11:33:47,530:INFO:create_model_container: 2
+2021-05-15 11:33:47,530:INFO:master_model_container: 2
+2021-05-15 11:33:47,531:INFO:display_container: 2
+2021-05-15 11:33:47,531:INFO:KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+                     weights='uniform')
+2021-05-15 11:33:47,531:INFO:create_model() succesfully completed......................................
+2021-05-15 11:33:47,606:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:33:47,606:INFO:Creating metrics dataframe
+2021-05-15 11:33:47,626:INFO:Initializing Naive Bayes
+2021-05-15 11:33:47,626:INFO:Total runtime is 0.1012644648551941 minutes
+2021-05-15 11:33:47,639:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:33:47,640:INFO:Initializing create_model()
+2021-05-15 11:33:47,640:INFO:create_model(estimator=nb, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E7CE1DE50>, kwargs={})
+2021-05-15 11:33:47,640:INFO:Checking exceptions
+2021-05-15 11:33:47,641:INFO:Importing libraries
+2021-05-15 11:33:47,641:INFO:Copying training dataset
+2021-05-15 11:33:47,642:INFO:Defining folds
+2021-05-15 11:33:47,642:INFO:Declaring metric variables
+2021-05-15 11:33:47,656:INFO:Importing untrained model
+2021-05-15 11:33:47,667:INFO:Naive Bayes Imported succesfully
+2021-05-15 11:33:47,686:INFO:Starting cross validation
+2021-05-15 11:33:47,687:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:33:47,744:INFO:Calculating mean and std
+2021-05-15 11:33:47,745:INFO:Creating metrics dataframe
+2021-05-15 11:33:47,750:INFO:Uploading results into container
+2021-05-15 11:33:47,751:INFO:Uploading model into container now
+2021-05-15 11:33:47,751:INFO:create_model_container: 3
+2021-05-15 11:33:47,751:INFO:master_model_container: 3
+2021-05-15 11:33:47,751:INFO:display_container: 2
+2021-05-15 11:33:47,752:INFO:GaussianNB(priors=None, var_smoothing=1e-09)
+2021-05-15 11:33:47,752:INFO:create_model() succesfully completed......................................
+2021-05-15 11:33:47,820:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:33:47,820:INFO:Creating metrics dataframe
+2021-05-15 11:33:47,844:INFO:Initializing Decision Tree Classifier
+2021-05-15 11:33:47,845:INFO:Total runtime is 0.10491477648417155 minutes
+2021-05-15 11:33:47,855:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:33:47,855:INFO:Initializing create_model()
+2021-05-15 11:33:47,856:INFO:create_model(estimator=dt, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E7CE1DE50>, kwargs={})
+2021-05-15 11:33:47,856:INFO:Checking exceptions
+2021-05-15 11:33:47,856:INFO:Importing libraries
+2021-05-15 11:33:47,856:INFO:Copying training dataset
+2021-05-15 11:33:47,858:INFO:Defining folds
+2021-05-15 11:33:47,858:INFO:Declaring metric variables
+2021-05-15 11:33:47,870:INFO:Importing untrained model
+2021-05-15 11:33:47,882:INFO:Decision Tree Classifier Imported succesfully
+2021-05-15 11:33:47,911:INFO:Starting cross validation
+2021-05-15 11:33:47,912:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:33:47,977:INFO:Calculating mean and std
+2021-05-15 11:33:47,978:INFO:Creating metrics dataframe
+2021-05-15 11:33:47,985:INFO:Uploading results into container
+2021-05-15 11:33:47,986:INFO:Uploading model into container now
+2021-05-15 11:33:47,986:INFO:create_model_container: 4
+2021-05-15 11:33:47,986:INFO:master_model_container: 4
+2021-05-15 11:33:47,987:INFO:display_container: 2
+2021-05-15 11:33:47,988:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=123, splitter='best')
+2021-05-15 11:33:47,988:INFO:create_model() succesfully completed......................................
+2021-05-15 11:33:48,054:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:33:48,054:INFO:Creating metrics dataframe
+2021-05-15 11:33:48,078:INFO:Initializing SVM - Linear Kernel
+2021-05-15 11:33:48,078:INFO:Total runtime is 0.108787739276886 minutes
+2021-05-15 11:33:48,095:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:33:48,095:INFO:Initializing create_model()
+2021-05-15 11:33:48,096:INFO:create_model(estimator=svm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E7CE1DE50>, kwargs={})
+2021-05-15 11:33:48,096:INFO:Checking exceptions
+2021-05-15 11:33:48,096:INFO:Importing libraries
+2021-05-15 11:33:48,096:INFO:Copying training dataset
+2021-05-15 11:33:48,097:INFO:Defining folds
+2021-05-15 11:33:48,097:INFO:Declaring metric variables
+2021-05-15 11:33:48,113:INFO:Importing untrained model
+2021-05-15 11:33:48,127:INFO:SVM - Linear Kernel Imported succesfully
+2021-05-15 11:33:48,146:INFO:Starting cross validation
+2021-05-15 11:33:48,148:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:33:48,211:INFO:Calculating mean and std
+2021-05-15 11:33:48,213:INFO:Creating metrics dataframe
+2021-05-15 11:33:48,222:INFO:Uploading results into container
+2021-05-15 11:33:48,223:INFO:Uploading model into container now
+2021-05-15 11:33:48,223:INFO:create_model_container: 5
+2021-05-15 11:33:48,223:INFO:master_model_container: 5
+2021-05-15 11:33:48,224:INFO:display_container: 2
+2021-05-15 11:33:48,225:INFO:SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.001, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=-1, penalty='l2',
+              power_t=0.5, random_state=123, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False)
+2021-05-15 11:33:48,225:INFO:create_model() succesfully completed......................................
+2021-05-15 11:33:48,309:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:33:48,309:INFO:Creating metrics dataframe
+2021-05-15 11:33:48,333:INFO:Initializing Ridge Classifier
+2021-05-15 11:33:48,333:INFO:Total runtime is 0.1130430301030477 minutes
+2021-05-15 11:33:48,344:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:33:48,345:INFO:Initializing create_model()
+2021-05-15 11:33:48,345:INFO:create_model(estimator=ridge, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E7CE1DE50>, kwargs={})
+2021-05-15 11:33:48,346:INFO:Checking exceptions
+2021-05-15 11:33:48,346:INFO:Importing libraries
+2021-05-15 11:33:48,346:INFO:Copying training dataset
+2021-05-15 11:33:48,347:INFO:Defining folds
+2021-05-15 11:33:48,348:INFO:Declaring metric variables
+2021-05-15 11:33:48,359:INFO:Importing untrained model
+2021-05-15 11:33:48,373:INFO:Ridge Classifier Imported succesfully
+2021-05-15 11:33:48,391:INFO:Starting cross validation
+2021-05-15 11:33:48,392:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:33:48,455:INFO:Calculating mean and std
+2021-05-15 11:33:48,456:INFO:Creating metrics dataframe
+2021-05-15 11:33:48,467:INFO:Uploading results into container
+2021-05-15 11:33:48,468:INFO:Uploading model into container now
+2021-05-15 11:33:48,468:INFO:create_model_container: 6
+2021-05-15 11:33:48,468:INFO:master_model_container: 6
+2021-05-15 11:33:48,468:INFO:display_container: 2
+2021-05-15 11:33:48,469:INFO:RidgeClassifier(alpha=1.0, class_weight=None, copy_X=True, fit_intercept=True,
+                max_iter=None, normalize=False, random_state=123, solver='auto',
+                tol=0.001)
+2021-05-15 11:33:48,470:INFO:create_model() succesfully completed......................................
+2021-05-15 11:33:48,551:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:33:48,551:INFO:Creating metrics dataframe
+2021-05-15 11:33:48,575:INFO:Initializing Random Forest Classifier
+2021-05-15 11:33:48,575:INFO:Total runtime is 0.11707303126653036 minutes
+2021-05-15 11:33:48,585:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:33:48,585:INFO:Initializing create_model()
+2021-05-15 11:33:48,586:INFO:create_model(estimator=rf, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E7CE1DE50>, kwargs={})
+2021-05-15 11:33:48,586:INFO:Checking exceptions
+2021-05-15 11:33:48,586:INFO:Importing libraries
+2021-05-15 11:33:48,586:INFO:Copying training dataset
+2021-05-15 11:33:48,587:INFO:Defining folds
+2021-05-15 11:33:48,587:INFO:Declaring metric variables
+2021-05-15 11:33:48,599:INFO:Importing untrained model
+2021-05-15 11:33:48,611:INFO:Random Forest Classifier Imported succesfully
+2021-05-15 11:33:48,635:INFO:Starting cross validation
+2021-05-15 11:33:48,636:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:33:49,547:INFO:Calculating mean and std
+2021-05-15 11:33:49,549:INFO:Creating metrics dataframe
+2021-05-15 11:33:49,554:INFO:Uploading results into container
+2021-05-15 11:33:49,554:INFO:Uploading model into container now
+2021-05-15 11:33:49,555:INFO:create_model_container: 7
+2021-05-15 11:33:49,555:INFO:master_model_container: 7
+2021-05-15 11:33:49,555:INFO:display_container: 2
+2021-05-15 11:33:49,556:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=-1, oob_score=False, random_state=123, verbose=0,
+                       warm_start=False)
+2021-05-15 11:33:49,556:INFO:create_model() succesfully completed......................................
+2021-05-15 11:33:49,631:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:33:49,631:INFO:Creating metrics dataframe
+2021-05-15 11:33:49,654:INFO:Initializing Quadratic Discriminant Analysis
+2021-05-15 11:33:49,654:INFO:Total runtime is 0.135064435005188 minutes
+2021-05-15 11:33:49,669:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:33:49,670:INFO:Initializing create_model()
+2021-05-15 11:33:49,670:INFO:create_model(estimator=qda, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E7CE1DE50>, kwargs={})
+2021-05-15 11:33:49,670:INFO:Checking exceptions
+2021-05-15 11:33:49,670:INFO:Importing libraries
+2021-05-15 11:33:49,670:INFO:Copying training dataset
+2021-05-15 11:33:49,671:INFO:Defining folds
+2021-05-15 11:33:49,671:INFO:Declaring metric variables
+2021-05-15 11:33:49,682:INFO:Importing untrained model
+2021-05-15 11:33:49,692:INFO:Quadratic Discriminant Analysis Imported succesfully
+2021-05-15 11:33:49,717:INFO:Starting cross validation
+2021-05-15 11:33:49,718:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:33:49,812:INFO:Calculating mean and std
+2021-05-15 11:33:49,814:INFO:Creating metrics dataframe
+2021-05-15 11:33:49,824:INFO:Uploading results into container
+2021-05-15 11:33:49,825:INFO:Uploading model into container now
+2021-05-15 11:33:49,825:INFO:create_model_container: 8
+2021-05-15 11:33:49,826:INFO:master_model_container: 8
+2021-05-15 11:33:49,826:INFO:display_container: 2
+2021-05-15 11:33:49,827:INFO:QuadraticDiscriminantAnalysis(priors=None, reg_param=0.0,
+                              store_covariance=False, tol=0.0001)
+2021-05-15 11:33:49,827:INFO:create_model() succesfully completed......................................
+2021-05-15 11:33:49,914:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:33:49,914:INFO:Creating metrics dataframe
+2021-05-15 11:33:49,939:INFO:Initializing Ada Boost Classifier
+2021-05-15 11:33:49,939:INFO:Total runtime is 0.13981117804845175 minutes
+2021-05-15 11:33:49,963:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:33:49,963:INFO:Initializing create_model()
+2021-05-15 11:33:49,964:INFO:create_model(estimator=ada, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E7CE1DE50>, kwargs={})
+2021-05-15 11:33:49,964:INFO:Checking exceptions
+2021-05-15 11:33:49,964:INFO:Importing libraries
+2021-05-15 11:33:49,964:INFO:Copying training dataset
+2021-05-15 11:33:49,965:INFO:Defining folds
+2021-05-15 11:33:49,965:INFO:Declaring metric variables
+2021-05-15 11:33:49,979:INFO:Importing untrained model
+2021-05-15 11:33:49,990:INFO:Ada Boost Classifier Imported succesfully
+2021-05-15 11:33:50,012:INFO:Starting cross validation
+2021-05-15 11:33:50,013:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:33:50,489:INFO:Calculating mean and std
+2021-05-15 11:33:50,490:INFO:Creating metrics dataframe
+2021-05-15 11:33:50,495:INFO:Uploading results into container
+2021-05-15 11:33:50,495:INFO:Uploading model into container now
+2021-05-15 11:33:50,496:INFO:create_model_container: 9
+2021-05-15 11:33:50,496:INFO:master_model_container: 9
+2021-05-15 11:33:50,496:INFO:display_container: 2
+2021-05-15 11:33:50,496:INFO:AdaBoostClassifier(algorithm='SAMME.R', base_estimator=None, learning_rate=1.0,
+                   n_estimators=50, random_state=123)
+2021-05-15 11:33:50,496:INFO:create_model() succesfully completed......................................
+2021-05-15 11:33:50,559:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:33:50,560:INFO:Creating metrics dataframe
+2021-05-15 11:33:50,588:INFO:Initializing Gradient Boosting Classifier
+2021-05-15 11:33:50,588:INFO:Total runtime is 0.150627330938975 minutes
+2021-05-15 11:33:50,600:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:33:50,600:INFO:Initializing create_model()
+2021-05-15 11:33:50,600:INFO:create_model(estimator=gbc, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E7CE1DE50>, kwargs={})
+2021-05-15 11:33:50,600:INFO:Checking exceptions
+2021-05-15 11:33:50,600:INFO:Importing libraries
+2021-05-15 11:33:50,601:INFO:Copying training dataset
+2021-05-15 11:33:50,602:INFO:Defining folds
+2021-05-15 11:33:50,602:INFO:Declaring metric variables
+2021-05-15 11:33:50,610:INFO:Importing untrained model
+2021-05-15 11:33:50,621:INFO:Gradient Boosting Classifier Imported succesfully
+2021-05-15 11:33:50,643:INFO:Starting cross validation
+2021-05-15 11:33:50,645:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:33:51,485:INFO:Calculating mean and std
+2021-05-15 11:33:51,486:INFO:Creating metrics dataframe
+2021-05-15 11:33:51,491:INFO:Uploading results into container
+2021-05-15 11:33:51,492:INFO:Uploading model into container now
+2021-05-15 11:33:51,492:INFO:create_model_container: 10
+2021-05-15 11:33:51,492:INFO:master_model_container: 10
+2021-05-15 11:33:51,492:INFO:display_container: 2
+2021-05-15 11:33:51,493:INFO:GradientBoostingClassifier(ccp_alpha=0.0, criterion='friedman_mse', init=None,
+                           learning_rate=0.1, loss='deviance', max_depth=3,
+                           max_features=None, max_leaf_nodes=None,
+                           min_impurity_decrease=0.0, min_impurity_split=None,
+                           min_samples_leaf=1, min_samples_split=2,
+                           min_weight_fraction_leaf=0.0, n_estimators=100,
+                           n_iter_no_change=None, presort='deprecated',
+                           random_state=123, subsample=1.0, tol=0.0001,
+                           validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2021-05-15 11:33:51,494:INFO:create_model() succesfully completed......................................
+2021-05-15 11:33:51,563:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:33:51,563:INFO:Creating metrics dataframe
+2021-05-15 11:33:51,590:INFO:Initializing Linear Discriminant Analysis
+2021-05-15 11:33:51,590:INFO:Total runtime is 0.167332394917806 minutes
+2021-05-15 11:33:51,602:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:33:51,603:INFO:Initializing create_model()
+2021-05-15 11:33:51,604:INFO:create_model(estimator=lda, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E7CE1DE50>, kwargs={})
+2021-05-15 11:33:51,604:INFO:Checking exceptions
+2021-05-15 11:33:51,604:INFO:Importing libraries
+2021-05-15 11:33:51,604:INFO:Copying training dataset
+2021-05-15 11:33:51,605:INFO:Defining folds
+2021-05-15 11:33:51,605:INFO:Declaring metric variables
+2021-05-15 11:33:51,616:INFO:Importing untrained model
+2021-05-15 11:33:51,627:INFO:Linear Discriminant Analysis Imported succesfully
+2021-05-15 11:33:51,650:INFO:Starting cross validation
+2021-05-15 11:33:51,651:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:33:51,719:INFO:Calculating mean and std
+2021-05-15 11:33:51,720:INFO:Creating metrics dataframe
+2021-05-15 11:33:51,725:INFO:Uploading results into container
+2021-05-15 11:33:51,725:INFO:Uploading model into container now
+2021-05-15 11:33:51,726:INFO:create_model_container: 11
+2021-05-15 11:33:51,726:INFO:master_model_container: 11
+2021-05-15 11:33:51,726:INFO:display_container: 2
+2021-05-15 11:33:51,726:INFO:LinearDiscriminantAnalysis(n_components=None, priors=None, shrinkage=None,
+                           solver='svd', store_covariance=False, tol=0.0001)
+2021-05-15 11:33:51,726:INFO:create_model() succesfully completed......................................
+2021-05-15 11:33:51,803:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:33:51,804:INFO:Creating metrics dataframe
+2021-05-15 11:33:51,832:INFO:Initializing Extra Trees Classifier
+2021-05-15 11:33:51,832:INFO:Total runtime is 0.17135579586029054 minutes
+2021-05-15 11:33:51,846:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:33:51,847:INFO:Initializing create_model()
+2021-05-15 11:33:51,847:INFO:create_model(estimator=et, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E7CE1DE50>, kwargs={})
+2021-05-15 11:33:51,847:INFO:Checking exceptions
+2021-05-15 11:33:51,848:INFO:Importing libraries
+2021-05-15 11:33:51,848:INFO:Copying training dataset
+2021-05-15 11:33:51,849:INFO:Defining folds
+2021-05-15 11:33:51,849:INFO:Declaring metric variables
+2021-05-15 11:33:51,862:INFO:Importing untrained model
+2021-05-15 11:33:51,873:INFO:Extra Trees Classifier Imported succesfully
+2021-05-15 11:33:51,900:INFO:Starting cross validation
+2021-05-15 11:33:51,902:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:33:52,737:INFO:Calculating mean and std
+2021-05-15 11:33:52,738:INFO:Creating metrics dataframe
+2021-05-15 11:33:52,742:INFO:Uploading results into container
+2021-05-15 11:33:52,742:INFO:Uploading model into container now
+2021-05-15 11:33:52,742:INFO:create_model_container: 12
+2021-05-15 11:33:52,742:INFO:master_model_container: 12
+2021-05-15 11:33:52,743:INFO:display_container: 2
+2021-05-15 11:33:52,743:INFO:ExtraTreesClassifier(bootstrap=False, ccp_alpha=0.0, class_weight=None,
+                     criterion='gini', max_depth=None, max_features='auto',
+                     max_leaf_nodes=None, max_samples=None,
+                     min_impurity_decrease=0.0, min_impurity_split=None,
+                     min_samples_leaf=1, min_samples_split=2,
+                     min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=-1,
+                     oob_score=False, random_state=123, verbose=0,
+                     warm_start=False)
+2021-05-15 11:33:52,743:INFO:create_model() succesfully completed......................................
+2021-05-15 11:33:52,812:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:33:52,812:INFO:Creating metrics dataframe
+2021-05-15 11:33:52,838:INFO:Initializing Light Gradient Boosting Machine
+2021-05-15 11:33:52,838:INFO:Total runtime is 0.18812535603841146 minutes
+2021-05-15 11:33:52,849:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:33:52,850:INFO:Initializing create_model()
+2021-05-15 11:33:52,850:INFO:create_model(estimator=lightgbm, fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E7CE1DE50>, kwargs={})
+2021-05-15 11:33:52,850:INFO:Checking exceptions
+2021-05-15 11:33:52,850:INFO:Importing libraries
+2021-05-15 11:33:52,850:INFO:Copying training dataset
+2021-05-15 11:33:52,851:INFO:Defining folds
+2021-05-15 11:33:52,852:INFO:Declaring metric variables
+2021-05-15 11:33:52,864:INFO:Importing untrained model
+2021-05-15 11:33:52,876:INFO:Light Gradient Boosting Machine Imported succesfully
+2021-05-15 11:33:52,899:INFO:Starting cross validation
+2021-05-15 11:33:52,900:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:33:53,240:INFO:Calculating mean and std
+2021-05-15 11:33:53,241:INFO:Creating metrics dataframe
+2021-05-15 11:33:53,248:INFO:Uploading results into container
+2021-05-15 11:33:53,248:INFO:Uploading model into container now
+2021-05-15 11:33:53,248:INFO:create_model_container: 13
+2021-05-15 11:33:53,248:INFO:master_model_container: 13
+2021-05-15 11:33:53,248:INFO:display_container: 2
+2021-05-15 11:33:53,249:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, silent=True,
+               subsample=1.0, subsample_for_bin=200000, subsample_freq=0)
+2021-05-15 11:33:53,249:INFO:create_model() succesfully completed......................................
+2021-05-15 11:33:53,314:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:33:53,314:INFO:Creating metrics dataframe
+2021-05-15 11:33:53,368:INFO:Initializing create_model()
+2021-05-15 11:33:53,368:INFO:create_model(estimator=DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=123, splitter='best'), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=False, predict=False, fit_kwargs={}, groups=None, refit=True, verbose=False, system=False, metrics=None, display=None, kwargs={})
+2021-05-15 11:33:53,368:INFO:Checking exceptions
+2021-05-15 11:33:53,368:INFO:Importing libraries
+2021-05-15 11:33:53,368:INFO:Copying training dataset
+2021-05-15 11:33:53,369:INFO:Defining folds
+2021-05-15 11:33:53,369:INFO:Declaring metric variables
+2021-05-15 11:33:53,369:INFO:Importing untrained model
+2021-05-15 11:33:53,369:INFO:Declaring custom model
+2021-05-15 11:33:53,370:INFO:Decision Tree Classifier Imported succesfully
+2021-05-15 11:33:53,370:INFO:Cross validation set to False
+2021-05-15 11:33:53,371:INFO:Fitting Model
+2021-05-15 11:33:53,381:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=123, splitter='best')
+2021-05-15 11:33:53,381:INFO:create_models() succesfully completed......................................
+2021-05-15 11:33:53,511:INFO:create_model_container: 13
+2021-05-15 11:33:53,511:INFO:master_model_container: 13
+2021-05-15 11:33:53,511:INFO:display_container: 2
+2021-05-15 11:33:53,512:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=123, splitter='best')
+2021-05-15 11:33:53,512:INFO:compare_models() succesfully completed......................................
+2021-05-15 11:34:38,461:INFO:Initializing create_model()
+2021-05-15 11:34:38,462:INFO:create_model(estimator=lightgbm, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, verbose=True, system=True, metrics=None, display=None, kwargs={})
+2021-05-15 11:34:38,462:INFO:Checking exceptions
+2021-05-15 11:34:38,462:INFO:Preparing display monitor
+2021-05-15 11:34:38,504:INFO:Importing libraries
+2021-05-15 11:34:38,504:INFO:Copying training dataset
+2021-05-15 11:34:38,506:INFO:Defining folds
+2021-05-15 11:34:38,506:INFO:Declaring metric variables
+2021-05-15 11:34:38,523:INFO:Importing untrained model
+2021-05-15 11:34:38,539:INFO:Light Gradient Boosting Machine Imported succesfully
+2021-05-15 11:34:38,566:INFO:Starting cross validation
+2021-05-15 11:34:38,567:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:34:39,039:INFO:Calculating mean and std
+2021-05-15 11:34:39,040:INFO:Creating metrics dataframe
+2021-05-15 11:34:39,062:INFO:Finalizing model
+2021-05-15 11:34:39,162:INFO:Uploading results into container
+2021-05-15 11:34:39,162:INFO:Uploading model into container now
+2021-05-15 11:34:39,196:INFO:create_model_container: 14
+2021-05-15 11:34:39,196:INFO:master_model_container: 14
+2021-05-15 11:34:39,196:INFO:display_container: 3
+2021-05-15 11:34:39,197:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, silent=True,
+               subsample=1.0, subsample_for_bin=200000, subsample_freq=0)
+2021-05-15 11:34:39,197:INFO:create_model() succesfully completed......................................
+2021-05-15 11:34:48,140:INFO:Initializing predict_model()
+2021-05-15 11:34:48,140:INFO:predict_model(estimator=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, silent=True,
+               subsample=1.0, subsample_for_bin=200000, subsample_freq=0), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-05-15 11:34:48,141:INFO:Checking exceptions
+2021-05-15 11:34:48,141:INFO:Preloading libraries
+2021-05-15 11:34:48,141:INFO:Preparing display monitor
+2021-05-15 11:35:09,930:INFO:Initializing predict_model()
+2021-05-15 11:35:09,930:INFO:predict_model(estimator=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, silent=True,
+               subsample=1.0, subsample_for_bin=200000, subsample_freq=0), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-05-15 11:35:09,931:INFO:Checking exceptions
+2021-05-15 11:35:09,931:INFO:Preloading libraries
+2021-05-15 11:35:09,931:INFO:Preparing display monitor
+2021-05-15 11:36:09,711:INFO:Initializing create_model()
+2021-05-15 11:36:09,711:INFO:create_model(estimator=dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, verbose=False, system=True, metrics=None, display=None, kwargs={})
+2021-05-15 11:36:09,711:INFO:Checking exceptions
+2021-05-15 11:36:09,711:INFO:Importing libraries
+2021-05-15 11:36:09,711:INFO:Copying training dataset
+2021-05-15 11:36:09,711:INFO:Defining folds
+2021-05-15 11:36:09,711:INFO:Declaring metric variables
+2021-05-15 11:36:09,711:INFO:Importing untrained model
+2021-05-15 11:36:09,712:INFO:Decision Tree Classifier Imported succesfully
+2021-05-15 11:36:09,712:INFO:Starting cross validation
+2021-05-15 11:36:09,713:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:36:09,887:INFO:Calculating mean and std
+2021-05-15 11:36:09,888:INFO:Creating metrics dataframe
+2021-05-15 11:36:09,894:INFO:Finalizing model
+2021-05-15 11:36:09,900:INFO:Uploading results into container
+2021-05-15 11:36:09,900:INFO:Uploading model into container now
+2021-05-15 11:36:09,900:INFO:create_model_container: 15
+2021-05-15 11:36:09,900:INFO:master_model_container: 15
+2021-05-15 11:36:09,900:INFO:display_container: 6
+2021-05-15 11:36:09,901:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=123, splitter='best')
+2021-05-15 11:36:09,901:INFO:create_model() succesfully completed......................................
+2021-05-15 11:36:09,970:INFO:Initializing create_model()
+2021-05-15 11:36:09,970:INFO:create_model(estimator=lda, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, verbose=False, system=True, metrics=None, display=None, kwargs={})
+2021-05-15 11:36:09,970:INFO:Checking exceptions
+2021-05-15 11:36:09,970:INFO:Importing libraries
+2021-05-15 11:36:09,970:INFO:Copying training dataset
+2021-05-15 11:36:09,971:INFO:Defining folds
+2021-05-15 11:36:09,971:INFO:Declaring metric variables
+2021-05-15 11:36:09,971:INFO:Importing untrained model
+2021-05-15 11:36:09,971:INFO:Linear Discriminant Analysis Imported succesfully
+2021-05-15 11:36:09,971:INFO:Starting cross validation
+2021-05-15 11:36:09,972:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:36:10,038:INFO:Calculating mean and std
+2021-05-15 11:36:10,039:INFO:Creating metrics dataframe
+2021-05-15 11:36:10,044:INFO:Finalizing model
+2021-05-15 11:36:10,091:INFO:Uploading results into container
+2021-05-15 11:36:10,091:INFO:Uploading model into container now
+2021-05-15 11:36:10,092:INFO:create_model_container: 16
+2021-05-15 11:36:10,092:INFO:master_model_container: 16
+2021-05-15 11:36:10,092:INFO:display_container: 7
+2021-05-15 11:36:10,092:INFO:LinearDiscriminantAnalysis(n_components=None, priors=None, shrinkage=None,
+                           solver='svd', store_covariance=False, tol=0.0001)
+2021-05-15 11:36:10,092:INFO:create_model() succesfully completed......................................
+2021-05-15 11:36:19,725:INFO:Initializing blend_models()
+2021-05-15 11:36:19,725:INFO:blend_models(estimator_list=[LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, silent=True,
+               subsample=1.0, subsample_for_bin=200000, subsample_freq=0), DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=123, splitter='best'), LinearDiscriminantAnalysis(n_components=None, priors=None, shrinkage=None,
+                           solver='svd', store_covariance=False, tol=0.0001)], fold=None, round=4, choose_better=False, optimize=Accuracy, method=soft, weights=None, fit_kwargs=None, groups=None, verbose=True, display=None)
+2021-05-15 11:36:19,726:INFO:Checking exceptions
+2021-05-15 11:36:19,727:INFO:Preparing display monitor
+2021-05-15 11:36:19,762:INFO:Importing libraries
+2021-05-15 11:36:19,763:INFO:Copying training dataset
+2021-05-15 11:36:19,780:INFO:Getting model names
+2021-05-15 11:36:19,798:INFO:SubProcess create_model() called ==================================
+2021-05-15 11:36:19,804:INFO:Initializing create_model()
+2021-05-15 11:36:19,805:INFO:create_model(estimator=VotingClassifier(estimators=[('lightgbm',
+                              LGBMClassifier(boosting_type='gbdt',
+                                             class_weight=None,
+                                             colsample_bytree=1.0,
+                                             importance_type='split',
+                                             learning_rate=0.1, max_depth=-1,
+                                             min_child_samples=20,
+                                             min_child_weight=0.001,
+                                             min_split_gain=0.0,
+                                             n_estimators=100, n_jobs=-1,
+                                             num_leaves=31, objective=None,
+                                             random_state=123, reg_alpha=0.0,
+                                             reg_lambda=0.0, silent=True,
+                                             su...
+                                                     min_impurity_split=None,
+                                                     min_samples_leaf=1,
+                                                     min_samples_split=2,
+                                                     min_weight_fraction_leaf=0.0,
+                                                     presort='deprecated',
+                                                     random_state=123,
+                                                     splitter='best')),
+                             ('lda',
+                              LinearDiscriminantAnalysis(n_components=None,
+                                                         priors=None,
+                                                         shrinkage=None,
+                                                         solver='svd',
+                                                         store_covariance=False,
+                                                         tol=0.0001))],
+                 flatten_transform=True, n_jobs=-1, verbose=False,
+                 voting='soft', weights=None), fold=StratifiedKFold(n_splits=10, random_state=None, shuffle=False), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=True, verbose=True, system=False, metrics=None, display=<pycaret.internal.Display.Display object at 0x0000016E80218E80>, kwargs={})
+2021-05-15 11:36:19,805:INFO:Checking exceptions
+2021-05-15 11:36:19,805:INFO:Importing libraries
+2021-05-15 11:36:19,805:INFO:Copying training dataset
+2021-05-15 11:36:19,807:INFO:Defining folds
+2021-05-15 11:36:19,807:INFO:Declaring metric variables
+2021-05-15 11:36:19,819:INFO:Importing untrained model
+2021-05-15 11:36:19,820:INFO:Declaring custom model
+2021-05-15 11:36:19,832:INFO:Voting Classifier Imported succesfully
+2021-05-15 11:36:19,856:INFO:Starting cross validation
+2021-05-15 11:36:19,857:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2021-05-15 11:36:20,400:INFO:Calculating mean and std
+2021-05-15 11:36:20,401:INFO:Creating metrics dataframe
+2021-05-15 11:36:20,420:INFO:Finalizing model
+2021-05-15 11:36:20,541:INFO:Uploading results into container
+2021-05-15 11:36:20,541:INFO:Uploading model into container now
+2021-05-15 11:36:20,541:INFO:create_model_container: 17
+2021-05-15 11:36:20,542:INFO:master_model_container: 17
+2021-05-15 11:36:20,542:INFO:display_container: 8
+2021-05-15 11:36:20,551:INFO:VotingClassifier(estimators=[('lightgbm',
+                              LGBMClassifier(boosting_type='gbdt',
+                                             class_weight=None,
+                                             colsample_bytree=1.0,
+                                             importance_type='split',
+                                             learning_rate=0.1, max_depth=-1,
+                                             min_child_samples=20,
+                                             min_child_weight=0.001,
+                                             min_split_gain=0.0,
+                                             n_estimators=100, n_jobs=-1,
+                                             num_leaves=31, objective=None,
+                                             random_state=123, reg_alpha=0.0,
+                                             reg_lambda=0.0, silent=True,
+                                             su...
+                                                     min_impurity_split=None,
+                                                     min_samples_leaf=1,
+                                                     min_samples_split=2,
+                                                     min_weight_fraction_leaf=0.0,
+                                                     presort='deprecated',
+                                                     random_state=123,
+                                                     splitter='best')),
+                             ('lda',
+                              LinearDiscriminantAnalysis(n_components=None,
+                                                         priors=None,
+                                                         shrinkage=None,
+                                                         solver='svd',
+                                                         store_covariance=False,
+                                                         tol=0.0001))],
+                 flatten_transform=True, n_jobs=-1, verbose=False,
+                 voting='soft', weights=None)
+2021-05-15 11:36:20,551:INFO:create_model() succesfully completed......................................
+2021-05-15 11:36:20,656:INFO:SubProcess create_model() end ==================================
+2021-05-15 11:36:20,676:INFO:create_model_container: 17
+2021-05-15 11:36:20,676:INFO:master_model_container: 17
+2021-05-15 11:36:20,677:INFO:display_container: 8
+2021-05-15 11:36:20,681:INFO:VotingClassifier(estimators=[('lightgbm',
+                              LGBMClassifier(boosting_type='gbdt',
+                                             class_weight=None,
+                                             colsample_bytree=1.0,
+                                             importance_type='split',
+                                             learning_rate=0.1, max_depth=-1,
+                                             min_child_samples=20,
+                                             min_child_weight=0.001,
+                                             min_split_gain=0.0,
+                                             n_estimators=100, n_jobs=-1,
+                                             num_leaves=31, objective=None,
+                                             random_state=123, reg_alpha=0.0,
+                                             reg_lambda=0.0, silent=True,
+                                             su...
+                                                     min_impurity_split=None,
+                                                     min_samples_leaf=1,
+                                                     min_samples_split=2,
+                                                     min_weight_fraction_leaf=0.0,
+                                                     presort='deprecated',
+                                                     random_state=123,
+                                                     splitter='best')),
+                             ('lda',
+                              LinearDiscriminantAnalysis(n_components=None,
+                                                         priors=None,
+                                                         shrinkage=None,
+                                                         solver='svd',
+                                                         store_covariance=False,
+                                                         tol=0.0001))],
+                 flatten_transform=True, n_jobs=-1, verbose=False,
+                 voting='soft', weights=None)
+2021-05-15 11:36:20,682:INFO:blend_models() succesfully completed......................................
+2021-05-15 11:37:37,346:INFO:Initializing plot_model()
+2021-05-15 11:37:37,346:INFO:plot_model(plot=feature, fold=None, use_train_data=False, verbose=True, is_in_evaluate=False, display=None, display_format=None, estimator=VotingClassifier(estimators=[('lightgbm',
+                              LGBMClassifier(boosting_type='gbdt',
+                                             class_weight=None,
+                                             colsample_bytree=1.0,
+                                             importance_type='split',
+                                             learning_rate=0.1, max_depth=-1,
+                                             min_child_samples=20,
+                                             min_child_weight=0.001,
+                                             min_split_gain=0.0,
+                                             n_estimators=100, n_jobs=-1,
+                                             num_leaves=31, objective=None,
+                                             random_state=123, reg_alpha=0.0,
+                                             reg_lambda=0.0, silent=True,
+                                             su...
+                                                     min_impurity_split=None,
+                                                     min_samples_leaf=1,
+                                                     min_samples_split=2,
+                                                     min_weight_fraction_leaf=0.0,
+                                                     presort='deprecated',
+                                                     random_state=123,
+                                                     splitter='best')),
+                             ('lda',
+                              LinearDiscriminantAnalysis(n_components=None,
+                                                         priors=None,
+                                                         shrinkage=None,
+                                                         solver='svd',
+                                                         store_covariance=False,
+                                                         tol=0.0001))],
+                 flatten_transform=True, n_jobs=-1, verbose=False,
+                 voting='soft', weights=None), feature_name=None, fit_kwargs=None, groups=None, label=False, save=False, scale=1, system=True)
+2021-05-15 11:37:37,347:INFO:Checking exceptions
+2021-05-15 11:38:01,329:INFO:Initializing plot_model()
+2021-05-15 11:38:01,329:INFO:plot_model(plot=feature, fold=None, use_train_data=False, verbose=True, is_in_evaluate=False, display=None, display_format=None, estimator=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, silent=True,
+               subsample=1.0, subsample_for_bin=200000, subsample_freq=0), feature_name=None, fit_kwargs=None, groups=None, label=False, save=False, scale=1, system=True)
+2021-05-15 11:38:01,330:INFO:Checking exceptions
+2021-05-15 11:38:01,332:INFO:Preparing display monitor
+2021-05-15 11:38:01,346:INFO:Preloading libraries
+2021-05-15 11:38:01,362:INFO:Copying training dataset
+2021-05-15 11:38:01,363:INFO:Copying test dataset
+2021-05-15 11:38:01,364:INFO:Plot type: feature
+2021-05-15 11:38:01,845:WARNING:No coef_ found. Trying feature_importances_
+2021-05-15 11:38:02,108:INFO:Visual Rendered Successfully
+2021-05-15 11:38:02,191:INFO:plot_model() succesfully completed......................................
+2021-05-15 11:39:00,955:INFO:Initializing plot_model()
+2021-05-15 11:39:00,956:INFO:plot_model(plot=residuals, fold=None, use_train_data=False, verbose=True, is_in_evaluate=False, display=None, display_format=None, estimator=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, silent=True,
+               subsample=1.0, subsample_for_bin=200000, subsample_freq=0), feature_name=None, fit_kwargs=None, groups=None, label=False, save=False, scale=1, system=True)
+2021-05-15 11:39:00,956:INFO:Checking exceptions
+2021-05-15 11:39:51,217:INFO:Initializing save_model()
+2021-05-15 11:39:51,217:INFO:save_model(model=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, silent=True,
+               subsample=1.0, subsample_for_bin=200000, subsample_freq=0), model_name=deployment_1, prep_pipe_=Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False, features_todrop=[],
+                                      id_columns=[],
+                                      ml_usecase='classification',
+                                      numerical_features=[], target='class',
+                                      time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_nu...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       correlation_with_target_threshold=0.0,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough')],
+         verbose=False), verbose=True, kwargs={})
+2021-05-15 11:39:51,217:INFO:Adding model into prep_pipe
+2021-05-15 11:39:51,250:INFO:deployment_1.pkl saved in current working directory
+2021-05-15 11:39:51,268:INFO:Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False, features_todrop=[],
+                                      id_columns=[],
+                                      ml_usecase='classification',
+                                      numerical_features=[], target='class',
+                                      time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_nu...
+                 LGBMClassifier(boosting_type='gbdt', class_weight=None,
+                                colsample_bytree=1.0, importance_type='split',
+                                learning_rate=0.1, max_depth=-1,
+                                min_child_samples=20, min_child_weight=0.001,
+                                min_split_gain=0.0, n_estimators=100, n_jobs=-1,
+                                num_leaves=31, objective=None, random_state=123,
+                                reg_alpha=0.0, reg_lambda=0.0, silent=True,
+                                subsample=1.0, subsample_for_bin=200000,
+                                subsample_freq=0)]],
+         verbose=False)
+2021-05-15 11:39:51,269:INFO:save_model() succesfully completed......................................
+2021-05-15 11:43:55,424:INFO:Initializing load_model()
+2021-05-15 11:43:55,425:INFO:load_model(model_name=deployment_1.pkl, platform=None, authentication=None, verbose=True)
+2021-05-15 11:44:08,107:INFO:Initializing load_model()
+2021-05-15 11:44:08,108:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:44:25,917:INFO:Initializing load_model()
+2021-05-15 11:44:25,918:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:45:55,714:INFO:Initializing load_model()
+2021-05-15 11:45:55,716:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:47:40,745:INFO:Initializing load_model()
+2021-05-15 11:47:40,745:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:47:53,393:INFO:Initializing load_model()
+2021-05-15 11:47:53,393:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:49:23,059:INFO:Initializing load_model()
+2021-05-15 11:49:23,060:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:50:27,862:INFO:Initializing load_model()
+2021-05-15 11:50:27,864:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:53:25,583:INFO:Initializing load_model()
+2021-05-15 11:53:25,584:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:53:25,673:INFO:Initializing predict_model()
+2021-05-15 11:53:25,674:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-15 11:53:25,676:INFO:Checking exceptions
+2021-05-15 11:53:25,676:INFO:Preloading libraries
+2021-05-15 11:55:31,463:INFO:Initializing load_model()
+2021-05-15 11:55:31,464:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:55:36,602:INFO:Initializing load_model()
+2021-05-15 11:55:36,603:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:55:36,684:INFO:Initializing predict_model()
+2021-05-15 11:55:36,686:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-15 11:55:36,687:INFO:Checking exceptions
+2021-05-15 11:55:36,688:INFO:Preloading libraries
+2021-05-15 11:56:33,723:INFO:Initializing load_model()
+2021-05-15 11:56:33,724:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:56:33,817:INFO:Initializing predict_model()
+2021-05-15 11:56:33,818:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-15 11:56:33,819:INFO:Checking exceptions
+2021-05-15 11:56:33,819:INFO:Preloading libraries
+2021-05-15 11:56:38,437:INFO:Initializing load_model()
+2021-05-15 11:56:38,438:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:56:42,294:INFO:Initializing load_model()
+2021-05-15 11:56:42,295:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:56:42,386:INFO:Initializing predict_model()
+2021-05-15 11:56:42,386:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-15 11:56:42,388:INFO:Checking exceptions
+2021-05-15 11:56:42,389:INFO:Preloading libraries
+2021-05-15 11:58:23,531:INFO:Initializing load_model()
+2021-05-15 11:58:23,532:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:58:23,617:INFO:Initializing predict_model()
+2021-05-15 11:58:23,617:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-15 11:58:23,619:INFO:Checking exceptions
+2021-05-15 11:58:23,619:INFO:Preloading libraries
+2021-05-15 11:58:26,749:INFO:Initializing load_model()
+2021-05-15 11:58:26,749:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:58:30,659:INFO:Initializing load_model()
+2021-05-15 11:58:30,660:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 11:58:30,744:INFO:Initializing predict_model()
+2021-05-15 11:58:30,745:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-15 11:58:30,748:INFO:Checking exceptions
+2021-05-15 11:58:30,749:INFO:Preloading libraries
+2021-05-15 12:08:01,608:INFO:Initializing load_model()
+2021-05-15 12:08:01,609:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 12:08:01,682:INFO:Initializing predict_model()
+2021-05-15 12:08:01,683:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-15 12:08:01,684:INFO:Checking exceptions
+2021-05-15 12:08:01,685:INFO:Preloading libraries
+2021-05-15 12:12:06,476:INFO:Initializing load_model()
+2021-05-15 12:12:06,477:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 12:12:06,556:INFO:Initializing predict_model()
+2021-05-15 12:12:06,557:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-15 12:12:06,558:INFO:Checking exceptions
+2021-05-15 12:12:06,558:INFO:Preloading libraries
+2021-05-15 12:13:06,490:INFO:Initializing load_model()
+2021-05-15 12:13:06,490:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 12:13:06,555:INFO:Initializing predict_model()
+2021-05-15 12:13:06,556:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-15 12:13:06,558:INFO:Checking exceptions
+2021-05-15 12:13:06,558:INFO:Preloading libraries
+2021-05-15 12:13:22,361:INFO:Initializing load_model()
+2021-05-15 12:13:22,362:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 12:13:22,434:INFO:Initializing predict_model()
+2021-05-15 12:13:22,435:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-15 12:13:22,436:INFO:Checking exceptions
+2021-05-15 12:13:22,437:INFO:Preloading libraries
+2021-05-15 12:13:30,405:INFO:Initializing load_model()
+2021-05-15 12:13:30,406:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 12:15:50,339:INFO:Initializing load_model()
+2021-05-15 12:15:50,339:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 12:16:07,944:INFO:Initializing load_model()
+2021-05-15 12:16:07,945:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 12:19:31,357:INFO:Initializing load_model()
+2021-05-15 12:19:31,358:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 12:20:01,272:INFO:Initializing load_model()
+2021-05-15 12:20:01,274:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 12:20:19,786:INFO:Initializing load_model()
+2021-05-15 12:20:19,787:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 12:20:26,331:INFO:Initializing load_model()
+2021-05-15 12:20:26,331:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 12:20:26,404:INFO:Initializing predict_model()
+2021-05-15 12:20:26,404:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-15 12:20:26,406:INFO:Checking exceptions
+2021-05-15 12:20:26,406:INFO:Preloading libraries
+2021-05-15 13:54:51,818:INFO:Initializing load_model()
+2021-05-15 13:54:51,818:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 14:58:21,457:INFO:Initializing load_model()
+2021-05-15 14:58:21,458:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 14:58:23,963:INFO:Initializing load_model()
+2021-05-15 14:58:23,964:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 14:59:01,074:INFO:Initializing load_model()
+2021-05-15 14:59:01,074:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 15:13:36,535:INFO:Initializing load_model()
+2021-05-15 15:13:36,536:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 15:13:52,016:INFO:Initializing load_model()
+2021-05-15 15:13:52,016:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 15:13:52,085:INFO:Initializing predict_model()
+2021-05-15 15:13:52,086:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-15 15:13:52,087:INFO:Checking exceptions
+2021-05-15 15:13:52,088:INFO:Preloading libraries
+2021-05-15 19:21:18,432:INFO:Initializing load_model()
+2021-05-15 19:21:18,433:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 20:00:05,583:INFO:Initializing load_model()
+2021-05-15 20:00:05,584:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 20:01:34,424:INFO:Initializing load_model()
+2021-05-15 20:01:34,425:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-15 20:01:34,509:INFO:Initializing predict_model()
+2021-05-15 20:01:34,510:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-15 20:01:34,511:INFO:Checking exceptions
+2021-05-15 20:01:34,512:INFO:Preloading libraries
+2021-05-19 01:45:05,066:INFO:Initializing load_model()
+2021-05-19 01:45:05,067:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 01:45:12,524:INFO:Initializing load_model()
+2021-05-19 01:45:12,525:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 01:45:12,606:INFO:Initializing predict_model()
+2021-05-19 01:45:12,607:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 01:45:12,608:INFO:Checking exceptions
+2021-05-19 01:45:12,609:INFO:Preloading libraries
+2021-05-19 18:25:35,608:INFO:Initializing load_model()
+2021-05-19 18:25:35,609:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 18:50:35,669:INFO:Initializing load_model()
+2021-05-19 18:50:35,670:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 18:51:46,351:INFO:Initializing load_model()
+2021-05-19 18:51:46,352:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 18:52:08,310:INFO:Initializing load_model()
+2021-05-19 18:52:08,311:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 18:52:08,410:INFO:Initializing predict_model()
+2021-05-19 18:52:08,411:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 18:52:08,412:INFO:Checking exceptions
+2021-05-19 18:52:08,413:INFO:Preloading libraries
+2021-05-19 18:53:43,534:INFO:Initializing load_model()
+2021-05-19 18:53:43,534:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 18:53:43,602:INFO:Initializing predict_model()
+2021-05-19 18:53:43,603:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 18:53:43,604:INFO:Checking exceptions
+2021-05-19 18:53:43,604:INFO:Preloading libraries
+2021-05-19 18:54:16,468:INFO:Initializing load_model()
+2021-05-19 18:54:16,468:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 18:54:16,541:INFO:Initializing predict_model()
+2021-05-19 18:54:16,541:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 18:54:16,543:INFO:Checking exceptions
+2021-05-19 18:54:16,543:INFO:Preloading libraries
+2021-05-19 18:54:27,719:INFO:Initializing load_model()
+2021-05-19 18:54:27,719:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 18:54:41,256:INFO:Initializing load_model()
+2021-05-19 18:54:41,256:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 18:54:41,332:INFO:Initializing predict_model()
+2021-05-19 18:54:41,332:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 18:54:41,334:INFO:Checking exceptions
+2021-05-19 18:54:41,334:INFO:Preloading libraries
+2021-05-19 18:55:07,440:INFO:Initializing load_model()
+2021-05-19 18:55:07,440:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 18:55:07,510:INFO:Initializing predict_model()
+2021-05-19 18:55:07,511:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 18:55:07,513:INFO:Checking exceptions
+2021-05-19 18:55:07,513:INFO:Preloading libraries
+2021-05-19 18:55:30,633:INFO:Initializing load_model()
+2021-05-19 18:55:30,634:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 18:55:30,705:INFO:Initializing predict_model()
+2021-05-19 18:55:30,706:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 18:55:30,707:INFO:Checking exceptions
+2021-05-19 18:55:30,708:INFO:Preloading libraries
+2021-05-19 18:59:23,469:INFO:Initializing load_model()
+2021-05-19 18:59:23,470:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 19:00:06,140:INFO:Initializing load_model()
+2021-05-19 19:00:06,141:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 19:00:16,703:INFO:Initializing load_model()
+2021-05-19 19:00:16,703:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 19:00:16,775:INFO:Initializing predict_model()
+2021-05-19 19:00:16,776:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 19:00:16,777:INFO:Checking exceptions
+2021-05-19 19:00:16,777:INFO:Preloading libraries
+2021-05-19 19:00:28,413:INFO:Initializing load_model()
+2021-05-19 19:00:28,413:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 19:16:43,151:INFO:Initializing load_model()
+2021-05-19 19:16:43,152:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 19:16:56,768:INFO:Initializing load_model()
+2021-05-19 19:16:56,769:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 19:17:05,071:INFO:Initializing load_model()
+2021-05-19 19:17:05,071:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 19:17:14,123:INFO:Initializing load_model()
+2021-05-19 19:17:14,125:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 19:17:14,195:INFO:Initializing predict_model()
+2021-05-19 19:17:14,197:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 19:17:14,198:INFO:Checking exceptions
+2021-05-19 19:17:14,199:INFO:Preloading libraries
+2021-05-19 20:55:11,562:INFO:Initializing load_model()
+2021-05-19 20:55:11,566:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 20:56:16,415:INFO:Initializing load_model()
+2021-05-19 20:56:16,415:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 20:56:16,491:INFO:Initializing predict_model()
+2021-05-19 20:56:16,492:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 20:56:16,494:INFO:Checking exceptions
+2021-05-19 20:56:16,494:INFO:Preloading libraries
+2021-05-19 20:56:27,174:INFO:Initializing load_model()
+2021-05-19 20:56:27,175:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 20:56:33,915:INFO:Initializing load_model()
+2021-05-19 20:56:33,915:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 20:56:33,994:INFO:Initializing predict_model()
+2021-05-19 20:56:33,995:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 20:56:33,997:INFO:Checking exceptions
+2021-05-19 20:56:33,998:INFO:Preloading libraries
+2021-05-19 20:58:52,984:INFO:Initializing load_model()
+2021-05-19 20:58:52,984:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 20:59:06,997:INFO:Initializing load_model()
+2021-05-19 20:59:06,998:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 20:59:07,071:INFO:Initializing predict_model()
+2021-05-19 20:59:07,072:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 20:59:07,073:INFO:Checking exceptions
+2021-05-19 20:59:07,073:INFO:Preloading libraries
+2021-05-19 20:59:25,865:INFO:Initializing load_model()
+2021-05-19 20:59:25,866:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 20:59:33,236:INFO:Initializing load_model()
+2021-05-19 20:59:33,237:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 20:59:47,786:INFO:Initializing load_model()
+2021-05-19 20:59:47,786:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 20:59:47,859:INFO:Initializing predict_model()
+2021-05-19 20:59:47,859:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 20:59:47,861:INFO:Checking exceptions
+2021-05-19 20:59:47,861:INFO:Preloading libraries
+2021-05-19 20:59:50,305:INFO:Initializing load_model()
+2021-05-19 20:59:50,305:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 20:59:57,697:INFO:Initializing load_model()
+2021-05-19 20:59:57,698:INFO:load_model(model_name=deployment_1, platform=None, authentication=None, verbose=True)
+2021-05-19 20:59:57,772:INFO:Initializing predict_model()
+2021-05-19 20:59:57,773:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['Gender',
+                                                            'Impression',
+                                                            'HR'],
+                                      display_types=False,
+                                      ml_usecase='classification',
+                                      target='class')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='median',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Cat...
+                ('dummy', Dummify(target='class')),
+                ('fix_perfect', Remove_100(target='class')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       target_variable='class',
+                                       threshold=0.95)),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model', LGBMClassifier(random_state=123)]]), probability_threshold=None, encoded_labels=True, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None)
+2021-05-19 20:59:57,774:INFO:Checking exceptions
+2021-05-19 20:59:57,775:INFO:Preloading libraries
